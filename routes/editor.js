@@ -49,7 +49,7 @@ router.get('/', async (req, res, next) => {
       e= doc
     })
     .catch(err => console.log(err))
-res.render('dashboard',{a:a ,b:b ,c:c,d:d ,e:e})
+res.render('editor',{layout:'music' ,a:a ,b:b ,c:c,d:d ,e:e})
 })
 
 

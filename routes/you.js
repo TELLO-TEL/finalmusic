@@ -8,7 +8,7 @@ var You =  require('../models/youtubes')
 
 /* GET users listing. */
 router.get('/' ,function(req, res, next) {
-    res.render('Youtube', { title: 'Express' });
+    res.render('Youtube', { layout:'music' ,title: 'Express' });
   });
 
 
@@ -30,7 +30,7 @@ router.post('/',  (req, res, next)  => {
 
      new You(mayou).save()
          .then(resp=>{
-             res.send({message:'done'})
+             res.redirect('/users/editor')
              //res.redirect('/')
             }
              

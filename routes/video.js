@@ -19,7 +19,7 @@ var upload = multer({
 
 /* GET users listing. */
 router.get('/' ,function(req, res, next) {
-  res.render('video', { title: 'Express' });
+  res.render('video', { layout:'music' ,title: 'Express' });
 });
 //Upload image
 router.post('/', upload.any('myimage'),function (req, res, next) {
@@ -40,7 +40,7 @@ router.post('/', upload.any('myimage'),function (req, res, next) {
       })
       Video.addImage(newImage, function (err) {
               if (err){throw err}
-              else{res.send({message:'done'})}
+              else{res.redirect('/users/editor')}
       });
   
   });

@@ -31,7 +31,7 @@ var events = require('./routes/events');
 var video = require('./routes/video');
 var you = require('./routes/you');
 var users = require('./routes/users');
-var editors = require('./routes/');
+var editors = require('./routes/editor');
 var albums = require('./routes/albums');
 var dashboard =  require('./routes/dashboard');
 var allmusic =require('./routes/allmusic');
@@ -107,7 +107,7 @@ app.use('/albums',allalbums)
 app.use('/users/music', routes);
 app.use('/users/albums' ,albums)
 app.use('/users', users);
-app.use('/you', you);
+app.use('/users/youtube', you);
 app.use('/users/video', video);
 app.use('/users/events',events)
 app.use('/users/editor',editors)

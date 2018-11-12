@@ -8,7 +8,7 @@ var Events =  require('../models/Events')
 
 /* GET users listing. */
 router.get('/' ,function(req, res, next) {
-    res.render('Events', { title: 'Express' });
+    res.render('Events', {  layout:'music' ,title: 'Express' });
   });
 
 
@@ -25,7 +25,7 @@ router.post('/',  (req, res, next)  => {
 
      new Events(maevents).save()
          .then(resp=>{
-             res.send({message:'done'})
+             res.redirect('/users/editor')
             // res.redirect('/')
             }
              
